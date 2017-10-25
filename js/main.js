@@ -1,22 +1,3 @@
-<!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2017 by anonymous (http://jsbin.com/yopofikumi/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
-</head>
-<body>
-
-<script id="jsbin-javascript">
 //FIRST THING FIRST
 
 
@@ -36,22 +17,20 @@ alert(sumOfNumbers(35));
 
 
 
-function test() {
+originalObj = { a: 0 , b: { c: 0}};//one to be cloned
+            
+            function test(someObj) {
   
 
- obj1 = { a: 0 , b: { c: 0}};
- obj2 = Object.assign({}, obj1);
-  console.log(JSON.stringify(obj2));  // виводить { a: 0, b: { c: 0}}
-  
- 
-  // Повна копія
-obj1 = { a: 0 , b: { c: 0}};
-obj3 = JSON.parse(JSON.stringify(obj1));
-  
-  console.log(JSON.stringify(obj3));  // виводить { a: 0, b: { c: 0}}
-}
+                 
+                return Object.assign({}, someObj);
+                
+                  
+                 
+                }
 
-test();
+            var copiedObj = test(originalObj);
+            console.log(JSON.stringify(copiedObj ));
 
 
 
@@ -128,7 +107,3 @@ console.timeEnd('arrQueue');
 console.time('randObj');
 benchmarkArr(objRand);
 console.timeEnd('randObj');
-
-</script>
-</body>
-</html>
