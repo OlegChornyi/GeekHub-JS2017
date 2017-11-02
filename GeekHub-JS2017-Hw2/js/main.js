@@ -64,7 +64,7 @@ function ZazVida() {
 
 } 
 
-// 2015 year model Decorator 
+// 2015 year model Decorator; i think that this one isn't a decorator. you just created a new function wich will just take an object property and change it
 function lowerPrice(zazVida) { 
 
   var v = zazVida.cost(); 
@@ -94,8 +94,8 @@ function LowerLux(zazVida){
 
 }
 
-var zv = new ZazVida(); 
-lowerPrice(zv); 
+var zv = new ZazVida(); // here you create new Object 
+lowerPrice(zv); // here you just call the function which will change the value of zv.prop 
 Lux(zv);
 LowerLux(zv);
 
